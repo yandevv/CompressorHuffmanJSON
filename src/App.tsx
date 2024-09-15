@@ -1,4 +1,4 @@
-import { FormEvent, MouseEvent, useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { toast } from 'react-toastify';
 
 import { huffmanEncoding, huffmanDecoding } from './utils/huffmanCode';
@@ -75,7 +75,8 @@ function App() {
 						onChange={(e) => setToDecodeJSON(e.target.value)}
 						className="p-4 min-w-[50vw] resize-none bg-gray-400/40 dark:bg-stone-800 dark:placeholder:text-sky-50/40 rounded-md"
 						placeholder="Digite aqui o texto a ser decodificado..."
-						required />
+						required
+					/>
 					<button type="submit" className="bg-[#213547] text-white dark:bg-zinc-800 min-w-32 max-w-48">Decodificar</button>
 				</form>
 				{decodedData !== "" && (
